@@ -11,5 +11,12 @@
 |
 */
 
-Route::get('/', 'FrontController@inicio');
-Route::get('/admin', 'FrontController@administrador');
+Route::get(
+    '/',
+    'PublicController@canciones'
+);
+Route::get(
+    '/admin',
+    'FrontController@administrador'
+);
+

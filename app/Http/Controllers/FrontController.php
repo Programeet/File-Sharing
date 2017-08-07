@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class FrontController extends Controller
 {
     public function inicio(){
-        return view('inicio');
+        return view('publico.inicio');
     }
     public function administrador(){
-        return view('administrador');
+        return view('admin.administrador');
     }
 }
