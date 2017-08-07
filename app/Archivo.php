@@ -2,6 +2,8 @@
 
 namespace App;
 
+use App\Usuario;
+use App\Genero;
 use Illuminate\Database\Eloquent\Model;
 
 class Archivo extends Model
@@ -12,4 +14,12 @@ class Archivo extends Model
     ];
 
     public $timestamps = false;
+
+    public function usuario(){
+        return $this->belongsTo(Usuario::class);
+    }
+
+    public function genero(){
+        return $this->belongsTo(Genero::class);
+    }
 }

@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Archivo;
 use Illuminate\Database\Eloquent\Model;
 
 class Genero extends Model
@@ -12,4 +13,8 @@ class Genero extends Model
     ];
 
     public $timestamps = false;
+
+    public function archivos(){
+        return $this->hasMany(Archivo::class);
+    }
 }
