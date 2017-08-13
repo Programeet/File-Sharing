@@ -1,7 +1,7 @@
 @extends ('layouts.principal')
 @section('content')
   <div class="backit">
-    <h2>Titulo de la cancion</h2>
+    <h2>{{ $data->nombre }}</h2>
   </div>
     <div class="row">
       <div class="col-md-6">
@@ -10,22 +10,22 @@
       <div class="col-md-6">
         <div class="info-col">
           <div class="">
-            <span class="glyphicon glyphicon-music"></span> Nombre de la canción:
+            <span class="glyphicon glyphicon-music"></span> Nombre de la canción: {{ $data->nombre }}
           </div>
           <div class="">
-            <span class="glyphicon glyphicon-time"></span> Lanzamiento:
+            <span class="glyphicon glyphicon-time"></span> Lanzamiento: {{ $data->fecha_subida }}
           </div>
           <div class="">
-            <span class="glyphicon glyphicon-download"></span><span id="dcount"></span> Descargas:
+            <span class="glyphicon glyphicon-download"></span><span id="dcount"></span> Descargas: {{ $data->numero_descargas }}
           </div>
           <div class="">
-            <span class="glyphicon glyphicon-barcode"></span> Tamaño:
+            <span class="glyphicon glyphicon-barcode"></span> Tamaño: {{ $data->size }}
           </div>
           <div class="">
-            <span class="glyphicon glyphicon-tag"></span> Genero:
+            <span class="glyphicon glyphicon-tag"></span> Genero: {{ $data->genero->nombre }}
           </div>
           <div class="">
-            <span class="glyphicon glyphicon-user"></span> Subido por: <a href="#SubidasUsuario">Usuario</a>
+            <span class="glyphicon glyphicon-user"></span> Subido por: <a href="#SubidasUsuario">{{ $data->usuario->nick }}</a>
           </div>
         </div>
         <audio controls="controls">
