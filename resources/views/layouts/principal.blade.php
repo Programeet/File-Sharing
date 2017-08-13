@@ -33,11 +33,6 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <table>
-      </table>
-    </div>
-
     @yield('content')
 <footer>
   <p>Sapee</p>

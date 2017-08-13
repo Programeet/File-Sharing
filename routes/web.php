@@ -16,7 +16,10 @@ Route::get(
     'PublicController@canciones'
 );
 Route::get(
+    '/{id}',
+    'PublicController@descarga'
+);
+Route::get(
     '/admin',
     'FrontController@administrador'
 );
-
