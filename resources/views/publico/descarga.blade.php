@@ -1,4 +1,7 @@
 @extends ('layouts.principal')
+@section('title')
+<title>Descarga: {{$data->nombre}}</title>
+@stop
 @section('content')
   <div class="backit">
     <h2>{{ $data->nombre }}</h2>
@@ -35,16 +38,16 @@
       </div>
       <div class="col-md-12">
         <div class="backit">
-          <h3>Mas canciones del genero {genero}</h3>
+          <h3>Mas canciones del genero <b>{{$data->genero->nombre}}</b></h3>
         </div>
         <div class="related">
           <ul>
-            <li><a href="#">Related 1</a></li>
-            <li><a href="#">Related 2</a></li>
-            <li><a href="#">Related 3</a></li>
-            <li><a href="#">Related 4</a></li>
-            <li><a href="#">Related 5</a></li>
-            <li><a href="#">Related 6</a></li>
+            <?php foreach ($archivos_genero as $key): ?>
+              <?php if ($key->id != $data->id): ?>
+                  <li><a href="{{ route('descarga', ['id' => $key->id]) }}">{{$key->nombre}}</a></li>
+              <?php endif; ?>
+
+            <?php endforeach; ?>
           </ul>
 
         </div>

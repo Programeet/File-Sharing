@@ -18,7 +18,7 @@ Route::get(
 Route::get(
     '/{id}',
     'PublicController@descarga'
-);
+)->name('descarga');
 Route::get(
     '/admin',
     'FrontController@administrador'

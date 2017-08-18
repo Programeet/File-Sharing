@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Archivo;
 use App\Usuario;
+use App\Genero;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -15,8 +16,10 @@ class PublicController extends Controller
     }
     public function descarga($archivo_id){
         $archivo = Archivo::with(['usuario','genero'])->find($archivo_id);
-        // dd($archivo);
-        return view('publico.descarga')->with(['data' => $archivo]);
+        $archivos_genero = Archivo::where('genero_id', $archivo->genero->id)->get();
+        // dd($archivos_genero);
+
+        return view('publico.descarga')->with(['data' => $archivo, 'archivos_genero' => $archivos_genero]);
     }
     public function usuario($user){
       $usuario = Usuario::find($user);

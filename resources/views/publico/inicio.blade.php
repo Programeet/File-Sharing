@@ -1,22 +1,24 @@
-@extends ('layouts.principal') @section('content')
+@extends ('layouts.principal')
+@section('title')
+ <title>{{ env('APP_NAME') }}</title>
+@stop
+@section('content')
 <table class="table">
-  <thead>
     <tr>
       <td>
-        <li><a href="">Canciones</a></li>
+        <li><b>Canciones</b></li>
       </td>
       <td>
-        <li><a href="">Descargar</a></li>
+        <li><b>Descargar</b></li>
       </td>
     </tr>
-  </thead>
   @foreach($canciones as $cancion)
   <tr>
     <td>
-      <li><a href="#Link">{{ $cancion->nombre }}</a></li>
+      <li><a href="<?= URL::to('/').'/'. $cancion->id ?>">{{ $cancion->nombre }}</a></li>
     </td>
     <td>
-      <li><a href="#AhiVemos">Descargar</a></li>
+      <li><a href="#AhiVemos"><span class="glyphicon glyphicon-download"></span>  DESCARGAR</a></li>
     </td>
   </tr>
   @endforeach

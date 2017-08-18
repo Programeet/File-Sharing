@@ -1,4 +1,9 @@
 @extends ('layouts.principal')
+
+@section('title')
+ <title>Usuario: {{$usuario}}</title>
+@stop
+
 @section('content')
 <div class="blackit">
   <h2>Archivos de: {{ $usuario }}</h2>

@@ -7,6 +7,7 @@ html, body{
 }
 body{
   float: none;
+  color: #fff;
 }
 .container-main {
     max-width: 800px;
@@ -23,8 +24,110 @@ body{
   font-size: 13px;
   color: gray;
 }
-.backit{
+.table {
+  text-align: center;
+  list-style: none;
+  margin: 1em 0;
+  width: 100%;
+  overflow: hidden;
+  background: #FFF;
+  color: #024457;
+  border-radius: 10px;
+  border: 1px solid #167F92;
+}
+.table tr {
+  border: 1px solid #D9E4E6;
+}
+.table tr:nth-child(odd) {
+  background-color: #EAF3F3;
+}
+.table th {
+  display: none;
+  border: 1px solid #FFF;
+  background-color: #167F92;
+  color: #FFF;
+  padding: 1em;
+}
+.table td:nth-child(1) {
+  width: 75%;
+}
+.table th:first-child {
+  display: table-cell;
+  text-align: center;
+}
+.table th:nth-child(2) {
+  display: table-cell;
+}
+.table th:nth-child(2) span {
+  display: none;
+}
+.table th:nth-child(2):after {
+  content: attr(data-th);
+}
+@media (min-width: 480px) {
+  .table th:nth-child(2) span {
+    display: block;
+  }
+  .table th:nth-child(2):after {
+    display: none;
+  }
+}
+.table td {
+  display: block;
+  word-wrap: break-word;
+  max-width: 7em;
+}
+.table td:first-child {
+  display: table-cell;
+  text-align: center;
+  border-right: 1px solid #D9E4E6;
+}
+@media (min-width: 480px) {
+  .table td {
+    border: 1px solid #D9E4E6;
+  }
+}
+.table th, .table td {
+  text-align: left;
+  margin: .5em 1em;
+}
+@media (min-width: 480px) {
+  .table th, .table td {
+    display: table-cell;
+    padding: 1em;
+  }
+}
 
+body {
+  padding: 0 2em;
+  font-family: Arial, sans-serif;
+  color: #024457;
+  background: #f2f2f2;
+}
+
+h1 {
+  font-family: Verdana;
+  font-weight: normal;
+  color: #024457;
+}
+h1 span {
+  color: #167F92;
+}
+.table th {
+  display: none;
+  border: 1px solid #FFF;
+  background-color: #167F92;
+  color: #FFF;
+  padding: 1em;
+}
+.backit{
+  width: 100%;
+  background: #830101;
+  border-radius: 10px;
+}
+.backit h2, h3{
+  padding: 5px 0px ;
+  color: #fff;
 }
 .related{
   margin-left: 80px;
@@ -99,9 +202,9 @@ footer{
 }
 /* Dropdown Button */
 .dropbtn {
-    background-color: #4CAF50;
+    background-color: #830101;
     color: white;
-    padding: 16px;
+    padding: 11px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -132,7 +235,7 @@ footer{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #EB5A5A}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -141,5 +244,5 @@ footer{
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #700101;
 }
