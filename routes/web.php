@@ -23,3 +23,4 @@ Route::get(
     '/admin',
     'FrontController@administrador'
 );
+Route::get('/user/{user}', 'PublicController@usuario');

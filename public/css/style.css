@@ -71,6 +71,7 @@ footer{
     border: 0;
     font-size: 16px;
     background: #F2F2F2;
+    height: 43px;
 }
 #searchform button {
     margin: 0;
