@@ -17,12 +17,21 @@ class PublicController extends Controller
     public function descarga($archivo_id){
         $archivo = Archivo::with(['usuario','genero'])->find($archivo_id);
         $archivos_genero = Archivo::where('genero_id', $archivo->genero->id)->get();
-        // dd($archivos_genero);
-
         return view('publico.descarga')->with(['data' => $archivo, 'archivos_genero' => $archivos_genero]);
     }
     public function usuario($user){
       $usuario = Usuario::find($user);
       return view('publico.usuario')->with(['archivos' => $usuario->archivos, 'usuario' =>$usuario->nick]);
+    }
+
+    public function genero($gen){
+        $genero = Genero::with(['archivos'])->find($gen);
+        return view('publico.genero')->with(['archivos' => $genero->archivos, 'nombre' => $genero->nombre]);
+    }
+
+    public function search(Request $request){
+        $resp = Archivo::where('nombre', 'LIKE', '%'.$request->buscar.'%')->get();
+        // dd($resp);
+        return view('publico.busqueda')->with(['busqueda'=>$resp, 'buscado'=>$request->buscar]);
     }
 }

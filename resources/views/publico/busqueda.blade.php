@@ -1,12 +1,11 @@
 @extends ('layouts.principal')
-
 @section('title')
- <title>Usuario: {{$usuario}}</title>
+<title>Busqueda: {{ $buscado }}</title>
 @stop
 
 @section('content')
 <div class="blackit">
-  <h2>Archivos de: {{ $usuario }}</h2>
+  <h2>Resultado de busqueda: {{ $buscado }}</h2>
 </div>
 <table class="table">
   <thead>
@@ -15,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    @foreach ($archivos as $key)
+    @foreach ($busqueda as $key)
       <tr>
         <td><a href="{{ route('descarga', ['id'=>$key->id]) }}">{{ $key->nombre }}</a></td><td><a href="#AhiVemos"><span class="glyphicon glyphicon-download"></span>  DESCARGAR</a></td>
       </tr>

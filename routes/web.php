@@ -15,12 +15,16 @@ Route::get(
     '/',
     'PublicController@canciones'
 );
-Route::get(
-    '/{id}',
-    'PublicController@descarga'
-)->name('descarga');
+
 Route::get(
     '/admin',
     'FrontController@administrador'
 );
-Route::get('/user/{user}', 'PublicController@usuario');
+Route::get('/user/{user}', 'PublicController@usuario')->name('usuario');
+Route::get('/genero/{genero}', 'PublicController@genero')->name('genero');
+Route::get('/s/', 'PublicController@search')->name('search');
+
+Route::get(
+    '/{id}',
+    'PublicController@descarga'
+)->name('descarga');

@@ -19,7 +19,7 @@
         <img src="{{ asset('img/logo.png') }}" alt="">
       </a>
 
-      <form id="searchform" action="/" method="get">
+      <form id="searchform" action="{{ route('search') }}" method="get">
         <input type="text" name="buscar" id="searchfield" placeholder="Buscar" required>
         <button type="submit">
             <i class="fa fa-search"></i>
@@ -29,17 +29,14 @@
         <button class="dropbtn">Generos</button>
         <div class="dropdown-content">
         @foreach(App\Http\Controllers\FrontController::generos() as $genero)
-            <a href="#">{{ $genero->nombre }}</a>
+            <a href="{{ route('genero', ['genero' => $genero->id]) }}">{{ $genero->nombre }}</a>
         @endforeach
-          {{--  <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>  --}}
         </div>
       </div>
     </div>
     @yield('content')
 <footer>
-  <p>Sapee</p>
+Develop and Design By:<a href="https://twitter.com/programeet" target="_blank">Programeet</a> &copy;
 </footer>
 </div>
 

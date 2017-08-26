@@ -28,7 +28,7 @@
             <span class="glyphicon glyphicon-tag"></span> Genero: {{ $data->genero->nombre }}
           </div>
           <div class="">
-            <span class="glyphicon glyphicon-user"></span> Subido por: <a href="#SubidasUsuario">{{ $data->usuario->nick }}</a>
+            <span class="glyphicon glyphicon-user"></span> Subido por: <a href="{{route('usuario', ['usuario'=> $data->usuario->id])}}">{{ $data->usuario->nick }}</a>
           </div>
         </div>
         <audio controls="controls">

@@ -1,12 +1,12 @@
 @extends ('layouts.principal')
 
 @section('title')
- <title>Usuario: {{$usuario}}</title>
+ <title>Genero: {{$nombre}}</title>
 @stop
 
 @section('content')
 <div class="blackit">
-  <h2>Archivos de: {{ $usuario }}</h2>
+  <h2>Archivos por genero: {{ $nombre }}</h2>
 </div>
 <table class="table">
   <thead>
@@ -23,3 +23,4 @@
   </tbody>
 </table>
 @stop
+
