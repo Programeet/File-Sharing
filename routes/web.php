@@ -14,7 +14,7 @@
 Route::get(
     '/',
     'PublicController@canciones'
-);
+)->name('home');
 
 Route::get(
     '/admin',

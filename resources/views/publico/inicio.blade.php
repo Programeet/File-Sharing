@@ -15,7 +15,7 @@
   @foreach($canciones as $cancion)
   <tr>
     <td>
-      <li><a href="<?= URL::to('/').'/'. $cancion->id ?>">{{ $cancion->nombre }}</a></li>
+      <li><a href="{{ route('descarga', ['id' => $cancion->id]) }}">{{ $cancion->nombre }}</a></li>
     </td>
     <td>
       <li><a href="#AhiVemos"><span class="glyphicon glyphicon-download"></span>  DESCARGAR</a></li>
