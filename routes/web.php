@@ -19,7 +19,7 @@ Route::get(
 Route::get(
     '/admin',
     'FrontController@administrador'
-);
+)->name('admin');
 Route::get('/user/{user}', 'PublicController@usuario')->name('usuario');
 Route::get('/genero/{genero}', 'PublicController@genero')->name('genero');
 Route::get('/s/', 'PublicController@search')->name('search');
