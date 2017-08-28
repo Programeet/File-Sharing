@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
+    @yield('title')
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    @yiend('title')
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.html">{{ env('APP_NAME') }}</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -381,7 +381,7 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script type="text/javascript" src="{{ asset('js/bootstrap.min.jsjquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <!-- Bootstrap Core JavaScript -->
     <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
 
