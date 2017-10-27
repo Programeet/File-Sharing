@@ -53,7 +53,7 @@
                             <a href="{{route('admin_users')}}"><i class="fa fa-table fa-fw"></i>Usuarios</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>Mis archivos</a>
+                            <a href="{{route('myfiles')}}"><i class="fa fa-bar-chart-o fa-fw"></i>Mis archivos</a>
                         </li>
                         <li>
                             <a href="{{route('upload')}}"><i class="fa fa-edit fa-fw"></i>Subir</a>
@@ -97,7 +97,7 @@
     <script type="text/javascript" src="{{ asset('js/metisMenu.min.js') }}"></script>
     <!-- Custom Theme JavaScript -->
     <script type="text/javascript" src="{{ asset('js/sb-admin-2.js') }}"></script>
-
+@yield('requirejs')
 </body>
 
 </html>

@@ -18,6 +18,7 @@ Route::prefix('admin')->group(function(){
   Route::get('user/{id}/files', 'UserController@files')->name('user_files');
   Route::get('upload', 'FileController@index')->name('upload');
   Route::post('store', 'FileController@store')->name('file.store');
+  Route::get('files', 'UserController@myfiles')->name('myfiles');
 
 });
 Route::get('/user/{user}', 'PublicController@usuario')->name('usuario');
